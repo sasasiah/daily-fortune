@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ดูดวงครบจักรวาล 🔮</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+<h1>🔮 ดูดวงรายวัน</h1>
+
+<form method="POST">
+  <input class="field" name="name" placeholder="ชื่อ" required>
+  <input class="field" type="number" name="day" placeholder="วันเกิด" required>
+  <input class="field" type="number" name="month" placeholder="เดือนเกิด" required>
+  <input class="field" type="number" name="year" placeholder="ปีเกิด (ค.ศ.)" required>
+  
+  <label class="translate">
+    <input type="checkbox" name="translate" value="yes">
+    🌐 แปลเป็นภาษาไทย
+  </label>
+  
+  <button>ทำนายดวง</button>
+  
+</form>
+
+{% if result %}
+<hr>
+
+<h2>{{ result.name }}</h2>
+<p>♈ Zodiac: {{ result.zodiac }}</p>
+
+<h3>📅 Daily Horoscope</h3>
+<p>{{ result.fortune }}</p>
+
+<h3>🃏 Major Arcana</h3>
+<p><b>{{ result.card.name }}</b></p>
+<p>{{ result.card.meaning }}</p>
+
+<h3>🔢 Life Path Number: {{ result.life_number }}</h3>
+<p>{{ result.life_meaning }}</p>
+
+<h3>📊 Biorhythm</h3>
+<ul>
+  <li>Physical: {{ result.physical }}%</li>
+  <li>Emotional: {{ result.emotional }}%</li>
+  <li>Intellectual: {{ result.intellectual }}%</li>
+</ul>
+
+{% endif %}
+</div>
+
+</body>
+</html>

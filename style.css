@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(135deg, #2c003e, #000);
+    font-family: sans-serif;
+    color: white;
+}
+
+.card {
+    max-width: 420px;
+    margin: 40px auto;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px purple;
+}
+
+/* สำหรับช่องกรอก */
+.field {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+/* checkbox */
+label.translate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+label.translate input {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+
+button {
+    background: purple;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%; 
+    padding: 10px; 
+    margin: 8px 0; 
+    border-radius: 8px; 
+    border: none;
+}
+
+button:hover {
+    background: #b100ff;
+}
+
+hr {
+    margin: 20px 0;
+}
+label.translate {
+    display: flex;
+    align-items: center;
+    gap: 8px;         
+    margin-top: 10px;
+    cursor: pointer;
+}
+label.translate input {
+    transform: scale(1.2);
+}
+
